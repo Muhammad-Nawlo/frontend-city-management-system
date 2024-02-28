@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* colors */
+    --background: 255 255 255; /* #fff White */
+    --foreground: 000 000 000; /* #000 black */
+    --primary-rgb: 13 146 118; /* #0d9276 */
+    --primary-foreground-rgb: 255 255 255; /* #fff white */
+    --secondary-rgb: 187 226 236; /* #BBE2EC */
+    --tertiary-rgb: 64 162 227; /* #40A2E3 */
+    --quaternary-rgb: 255 246 233; /* #FFF6E9 */
+    --text-base-rgb: 0 0 0;
+    --text-second-rgb: 119 119 119;
+    /* fonts */
+    --primary-font: "Noto Sans JP";
+    --heading-font: "Noto Sans JP";
+    /* -- main navbar vars */
+    --nav-bg-clr: rgb(var(--primary-rgb));
+    --nav-text-clr: white;
+    --nav-link-bg-clr: rgb(var(--primary-rgb));
+    --nav-link-bg-hover-clr: rgb(var(--quaternary-rgb));
+    --nav-link-text-clr: white;
+    --nav-link-text-hover-clr: rgb(var(--primary-rgb));
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Fonts */
+  @font-face {
+    font-family: Noto Sans JP;
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap")
+      format("text/css");
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
